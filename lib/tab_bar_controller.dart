@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swift_pay/screens/history/history_page.dart';
 import 'package:swift_pay/screens/home/home_page.dart';
 import 'package:swift_pay/screens/settings/settings_page.dart';
 import 'theme.dart';
@@ -19,6 +20,10 @@ class _TabBarControllerState extends State<TabBarController> {
     setState(() {
       _currentIndex = index;
       if (_currentIndex == 1) {
+        _title = "Payment History";
+        _currentBody = HistoryPage();
+      }
+      else if (_currentIndex == 2) {
         _title = "Settings";
         _currentBody = SettingsPage();
       }
@@ -52,6 +57,7 @@ class _TabBarControllerState extends State<TabBarController> {
           currentIndex: _currentIndex,
           items: [
             new BottomNavigationBarItem(icon: Icon(Icons.home), title: new Text("Home")),
+            new BottomNavigationBarItem(icon: Icon(Icons.receipt), title: new Text("History")),
             new BottomNavigationBarItem(icon: Icon(Icons.settings), title: new Text("Settings")),
           ],
         ),

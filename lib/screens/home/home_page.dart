@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swift_pay/theme.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,8 +10,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: new Center(
-        child: new Text("Home"),
+      child: new SingleChildScrollView(
+        child: new Column(
+          children: <Widget>[
+            new Card(
+              color: currCardColor,
+              child: new Container(
+
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
