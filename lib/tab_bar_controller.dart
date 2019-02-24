@@ -3,6 +3,9 @@ import 'package:swift_pay/screens/history/history_page.dart';
 import 'package:swift_pay/screens/home/home_page.dart';
 import 'package:swift_pay/screens/settings/settings_page.dart';
 import 'theme.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'dart:io';
 import 'user_info.dart';
 
 class TabBarController extends StatefulWidget {
@@ -11,6 +14,9 @@ class TabBarController extends StatefulWidget {
 }
 
 class _TabBarControllerState extends State<TabBarController> {
+
+  final databaseRef = FirebaseDatabase.instance.reference();
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   int _currentIndex = 0;
   String _title = "SwiftPay";
@@ -34,9 +40,41 @@ class _TabBarControllerState extends State<TabBarController> {
     });
   }
 
+  void firebaseCloudMessaging_Listeners() {
+    if (Platform.isIOS) iOS_Permission();
+
+    _firebaseMessaging.getToken().then((token){
+      print(token);
+    });
+
+    _firebaseMessaging.configure(
+      onMessage: (Map<String, dynamic> message) async {
+        print('on message $message');
+      },
+      onResume: (Map<String, dynamic> message) async {
+        print('on resume $message');
+      },
+      onLaunch: (Map<String, dynamic> message) async {
+        print('on launch $message');
+      },
+    );
+  }
+
+  void iOS_Permission() {
+    _firebaseMessaging.requestNotificationPermissions(
+        IosNotificationSettings(sound: true, badge: true, alert: true)
+    );
+    _firebaseMessaging.onIosSettingsRegistered
+        .listen((IosNotificationSettings settings)
+    {
+      print("Settings registered: $settings");
+    });
+  }
+
   @override
   void initState() {
     super.initState();
+    firebaseCloudMessaging_Listeners();
   }
 
   @override

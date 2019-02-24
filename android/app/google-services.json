@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "850014544742",
+    "firebase_url": "https://swift-pay-admin.firebaseio.com",
+    "project_id": "swift-pay-admin",
+    "storage_bucket": "swift-pay-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850014544742:android:6eadcada960a9060",
+        "android_client_info": {
+          "package_name": "com.bk1031.swift_pay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850014544742-fr088l1nf4m268qe5b32i1q25sbf2a1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8RFkyJIVNKr0mi4xbpM-Tu4I7ex6oevE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
