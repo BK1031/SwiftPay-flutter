@@ -6,6 +6,8 @@
 	<string>Please allow us to access your location so we can proccess payments via geofencing</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Please allow us to access your location so we can proccess payments via geofencing</string>
+	<key>UIApplicationExitsOnSuspend</key>
+	<false/>
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
 	<key>FirebaseAppDelegateProxyEnabled</key>

@@ -45,6 +45,7 @@ class _TabBarControllerState extends State<TabBarController> {
 
     _firebaseMessaging.getToken().then((token){
       print(token);
+      databaseRef.child("users").child(userID).child("fcmToken").set(token);
     });
 
     _firebaseMessaging.configure(

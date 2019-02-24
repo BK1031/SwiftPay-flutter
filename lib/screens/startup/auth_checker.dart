@@ -28,6 +28,7 @@ class _AuthCheckerState extends State<AuthChecker> {
         lastName = userInfo["lastName"];
         fullName = firstName + " " + lastName;
         darkMode = userInfo["darkMode"];
+        fcmToken = userInfo["fcmToken"];
         print("");
         print("------------ USER DEBUG INFO ------------");
         print("NAME: $firstName $lastName}");

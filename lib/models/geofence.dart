@@ -5,6 +5,7 @@ class Geofence {
   double price;
   double lat;
   double long;
+  bool inside;
 
-  Geofence(this.id, this.name, this.distance, this.price, this.lat, this.long);
+  Geofence(this.id, this.name, this.distance, this.price, this.lat, this.long, this.inside);
 }
