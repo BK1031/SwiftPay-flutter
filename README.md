@@ -1,16 +1,23 @@
-# swift_pay
+# SwiftPay
 
-A new Flutter project.
+A simple payment manager which automates the payment process upon entering specific zones.
 
-## Getting Started
+## Our Vision
 
-This project is a starting point for a Flutter application.
+We believe that the payment process and making payments should be more efficient and convenient for all users.
 
-A few resources to get you started if this is your first Flutter project:
+We make payments fast and efficient by making them automatic. When a person passes by an event gate or toll booth, they are prompted to confirm a payment. Instead of stopping and reaching into their wallets to find money, people will be able to easily pay with the push of a button. We will use the TomTom geolocation API for event hosts and toll booths to set up payment areas.
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+## Credits
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- [Bharat Kathi](github.com/bk1031)
+  - App Development
+- [Thomas Liang](https://github.com/ThomasLiang123)
+  - Server Side Development
+- [Andrew Zhang](https://github.com/azhang11)
+  - UI/UX Design
+  - Marketing
+
+#### 2019 DeveloperWeek Hackathon
+
+This was a project worked on during the [2019 DeveloperWeek Hackathon](https://www.developerweek.com/hackathon/) in San Francisco. The specific challenge competed in was TomTom's *Break the Fences!* challenge utilizing their [Geofencing API](https://developer.tomtom.com/products/geofencing-api).
