@@ -10,7 +10,7 @@ We make payments fast and efficient by making them automatic. When a person pass
 
 ## Credits
 
-- [Bharat Kathi](github.com/bk1031)
+- [Bharat Kathi](https://github.com/bk1031)
   - App Development
 - [Thomas Liang](https://github.com/ThomasLiang123)
   - Server Side Development
